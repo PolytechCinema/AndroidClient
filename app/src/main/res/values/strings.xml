@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">ProjetCinema</string>
     <string name="welcome">cinemaEpul</string>
+    <string name="add_actor">Ajouter un acteur</string>
+    <string name="add_edit_acteur">Ajout ou édition d\'un acteur</string>
+    <string name="name">Nom</string>
+    <string name="name_helper">Nom de l\'acteur</string>
+    <string name="firstname">Prénom</string>
+    <string name="firstname_helper">Prénom de l\'acteur</string>
+    <string name="birthday">Date de naissance</string>
+    <string name="birthday_helper">Date de naissance</string>
+    <string name="death">Date de décès</string>
+    <string name="death_helper">Date de décès</string>
+    <string name="send">Valider</string>
+    <string name="delete">Supprimer</string>
 </resources>

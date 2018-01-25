@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="10dp"
+    android:paddingTop="15dp"
+    >
+
+    <TextView
+        android:id="@+id/titre_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/add_edit_acteur"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:textSize="20sp"
+        android:textColor="#880000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:paddingTop="70dp"
+        />
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_helper"
+        android:layout_below="@+id/name"
+        android:inputType="textCapWords"/>
+    <TextView
+        android:id="@+id/firstname"
+        android:textSize="20sp"
+        android:textColor="#880000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/firstname"
+        android:paddingTop="150dp"/>
+    <EditText
+        android:id="@+id/editFirstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/firstname_helper"
+        android:layout_below="@+id/firstname"
+        android:inputType="textCapWords"/>
+
+    <TextView
+        android:id="@+id/birthday"
+        android:textSize="20sp"
+        android:textColor="#880000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/birthday"
+        android:paddingTop="230sp"/>
+    <EditText
+        android:id="@+id/editBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/birthday_helper"
+        android:layout_below="@+id/birthday"
+        android:inputType="date"/>
+
+    <TextView
+        android:id="@+id/death"
+        android:textSize="20sp"
+        android:textColor="#880000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/death"
+        android:paddingTop="310sp" />
+    <EditText
+        android:id="@+id/editDeath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/death_helper"
+        android:layout_below="@+id/death"
+        android:inputType="date"/>
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/send"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/deleteActor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="@string/delete" />
+
+</RelativeLayout>
