@@ -61,6 +61,10 @@ public class HomepageFragment extends Fragment implements View.OnClickListener
             }
         };
         addActeur.setOnClickListener(answerListener);
+        showTable();
+    }
+
+    private void showTable() {
         CinemaWS cinemaWS = new Retrofit.Builder().baseUrl(MainActivity.CINEMA_BASE_URL).addConverterFactory(GsonConverterFactory.create()).build().create(CinemaWS.class);
         Call<List<Acteur>> call = cinemaWS.listActeurs();
         call.enqueue(new Callback<List<Acteur>>() {
@@ -89,19 +93,19 @@ public class HomepageFragment extends Fragment implements View.OnClickListener
             TextView text = new TextView(getActivity());
             switch (i){
                 case 0:
-                    text.setText("ID");
+                    text.setText(R.string.id);
                     break;
                 case 1:
-                    text.setText("Nom");
+                    text.setText(R.string.name);
                     break;
                 case 2:
-                    text.setText("Prénom");
+                    text.setText(R.string.firstname);
                     break;
                 case 3:
-                    text.setText("Date naiss");
+                    text.setText(R.string.birthday);
                     break;
                 case 4:
-                    text.setText("Date décès");
+                    text.setText(R.string.death);
                     break;
             }
             text.setTextColor(Color.parseColor("#5b1865"));
@@ -112,12 +116,28 @@ public class HomepageFragment extends Fragment implements View.OnClickListener
 
         for (int i=0; i < actors.size(); i++){
             tableRow = new TableRow(getActivity());
+            final int id = actors.get(i).getId();
+            tableRow.setId(id);
+            tableRow.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    FragmentManager fragmentManager = getFragmentManager();
+                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                    EditActeurFragment ffrag = new EditActeurFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("id", id);
+                    ffrag.setArguments(bundle);
+                    fragmentTransaction.replace(R.id.frag, ffrag);
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
+                }
+            });
             actorsTable.addView(tableRow, tableLayout);
             for (int j=0; j < 5; j++){
                 TextView text = new TextView(getActivity());
                 switch (j) {
                     case 0:
-                        text.setText(String.valueOf(actors.get(i).getId()));
+                        text.setText(String.valueOf(id));
                         break;
                     case 1:
                         text.setText(String.valueOf(actors.get(i).getNom()));
@@ -147,6 +167,6 @@ public class HomepageFragment extends Fragment implements View.OnClickListener
 
     @Override
     public void onClick(View view) {
-
+        showTable();
     }
 }

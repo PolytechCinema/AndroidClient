@@ -13,4 +13,17 @@
     <string name="death_helper">Date de décès</string>
     <string name="send">Valider</string>
     <string name="delete">Supprimer</string>
+    <string name="id">ID</string>
+    <string name="edit">Edit</string>
+    <string name="error_fetching">Error fetching actor</string>
+    <string name="error_adding">Error adding actor</string>
+    <string name="acteur_added">Acteur ajouté</string>
+    <string name="acteur_edited">Acteur modifié</string>
+    <string name="delete_question">Êtes vous sûr de vouloir supprimer cet acteur ?</string>
+    <string name="error_editing">Error editing actor</string>
+    <string name="acteur_deleted">Acteur supprimé</string>
+    <string name="error_deleting">Erreur lors de la suppression</string>
+    <string name="acteur_deletion_error">Erreur lors de la suppression</string>
+    <string name="acteur_edition_error">Erreur lors de la modification</string>
+    <string name="acteur_adding_error">Erreur lors de l\'ajout</string>
 </resources>
