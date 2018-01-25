@@ -16,13 +16,14 @@ public class AddActeurFragment extends AbstractAddEditActeurFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        container.removeView(getActivity().findViewById(R.id.deleteActor));
         return inflater.inflate(R.layout.edit_acteur, container, false);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState){
         super.onActivityCreated(savedInstanceState);
+        ViewGroup viewG = (ViewGroup) this.getActivity().findViewById(R.id.deleteActor).getParent();
+        viewG.removeView(this.getActivity().findViewById(R.id.deleteActor));
         Button requestButton = getActivity().findViewById(R.id.send);
         requestButton.setOnClickListener(new View.OnClickListener(){
             @Override
